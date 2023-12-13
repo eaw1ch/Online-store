@@ -67,6 +67,7 @@
 
 @media (min-width: 320px) and (max-width: 749px) {
     .navbar {
+        height: 90px;
         margin-left: 5%;
         margin-right: 5%;
     }
