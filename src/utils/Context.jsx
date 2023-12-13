@@ -48,8 +48,10 @@ export const Context = (props) => {
     };
 
     useEffect(() => {
-        if (localStorage.getItem('basket').length > 0) {
-            setBasket(JSON.parse(localStorage.getItem('basket')));
+         if (Array.isArray(localStorage.getItem('basket'))) {
+            if (localStorage.getItem('basket').length > 0) {
+                setBasket(JSON.parse(localStorage.getItem('basket')));
+            }
         }
     }, []);
 
