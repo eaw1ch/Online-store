@@ -31,8 +31,11 @@ function BuyForm() {
             phone: userData.phone,
             id: userData.id,
         }));
-        console.log(userData);
-        await axios.post('http://localhost:5000/', userData);
+       try {
+            await axios.post('http://localhost:5000/', userData);
+        } catch (e) {
+            console.log('Нет доступа к серверу!');
+        }
         reset();
         setView(true);
     };
