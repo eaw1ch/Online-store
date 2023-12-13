@@ -1,0 +1,126 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: stretch;
+    width: 100%;
+    gap: 30px 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 60%;
+    min-height: 350px;
+    max-height: 380px;
+    border: 1px solid lightgray;
+    border-radius: 0px;
+}
+
+.card__photo {
+    width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card__info {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: auto;
+}
+
+.card__price {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card__buy {
+    display: none;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 40px;
+    border: none;
+    color: white;
+}
+
+.purchased {
+    background-color: #00a82d;
+}
+
+.buy {
+    background-color: #296dc1;
+}
+
+.card:hover {
+    cursor: pointer;
+    .card__info {
+        transition: 500ms;
+        margin-top: 10px;
+        margin-bottom: auto;
+    }
+    .card__price {
+        transition: 500ms;
+        margin-top: 0px;
+        margin-bottom: auto;
+    }
+    .card__buy {
+        display: inline;
+    }
+}
+
+.card__buy:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .cards {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media (min-width: 581px) and (max-width: 750px) {
+    .cards {
+        grid-template-columns: repeat(1, auto);
+    }
+}
+
+@media (min-width: 320px) and (max-width: 750px) {
+    .cards {
+        grid-template-columns: repeat(1, auto);
+    }
+    .card__info {
+        margin-top: 10px;
+        margin-bottom: auto;
+    }
+    .card__price {
+        margin-top: 0px;
+        margin-bottom: auto;
+    }
+    .card__buy {
+        display: inline;
+    }
+}
+
+@media (min-width: 850px) and (max-width: 1350px) {
+    .card {
+        min-height: 320px;
+        max-height: 340px;
+    }
+    .card__photo {
+        width: 140px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 850px) {
+    .card {
+        min-height: 320px;
+        max-height: 340px;
+    }
+    .card__photo {
+        width: 120px;
+    }
+}

@@ -1,0 +1,225 @@
+.basket__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.basket__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.basket__item-info {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-left: 30px;
+    margin-right: auto;
+}
+
+.basket__item-priceinfo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.basket__item-count {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.count-minus {
+    display: inline-block;
+    background-color: white;
+    border: 0.7px solid gray;
+    margin-right: -1px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+}
+
+.count-minus:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+}
+
+.count-minus:before {
+    transform: translateX(-50%) translateY(-50%) rotate(180deg);
+}
+
+.count-plus {
+    position: relative;
+    display: inline-block;
+    background-color: white;
+    border: 0.7px solid gray;
+    margin-left: -1px;
+    width: 40px;
+    height: 40px;
+}
+
+.count-plus:before,
+.count-plus:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+}
+
+.count-plus:before {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+}
+
+.count-plus::after {
+    transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+.count-minus:hover {
+    background-color: #296dc1;
+    cursor: pointer;
+}
+
+.count-minus:hover:before,
+.count-minus:hover:after {
+    background-color: white;
+}
+
+.count-plus:hover {
+    background-color: #296dc1;
+    cursor: pointer;
+}
+
+.count-plus:hover:before,
+.count-plus:hover:after {
+    background-color: white;
+}
+
+.count-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    border: 0.7px solid gray;
+}
+
+.basket__item-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    width: 150px;
+}
+
+.basket__item-remove {
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    align-items: center;
+    margin-left: auto;
+    background-color: white;
+    border: none;
+}
+
+.basket__item-remove-icon {
+    stroke: black;
+}
+
+.basket__item-remove:hover {
+    cursor: pointer;
+    background-color: #296dc1;
+    .basket__item-remove-icon {
+        stroke: white;
+    }
+}
+
+.total-price {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+.underline-item {
+    width: 100%;
+    margin-top: 30px;
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .basket__item-info {
+        margin-left: 0;
+    }
+    .basket__item-count {
+        margin-left: 30px;
+        margin-right: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 749px) {
+    .total-price {
+        margin-right: auto;
+    }
+    .basket__item {
+        flex-direction: column;
+    }
+    .basket__item-priceinfo {
+        flex-direction: column-reverse;
+    }
+    .basket__item-photo {
+        width: 200px;
+        margin-bottom: 15px;
+    }
+    .basket__item-info {
+        margin-left: auto;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .basket__item-price {
+        margin-bottom: 15px;
+    }
+    .basket__item-count {
+        margin-bottom: 15px;
+    }
+    .basket__item-remove {
+        margin-right: auto;
+    }
+    .basket__item-remove {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 40px;
+        background-color: #296dc1;
+    }
+    .basket__item-remove::after {
+        content: 'Удалить';
+        color: white;
+    }
+    .basket__item-remove-icon {
+        width: 15px;
+        margin-right: 5px;
+        stroke: white;
+    }
+    .count-minus {
+        width: 30px;
+        height: 30px;
+    }
+    .count-plus {
+        width: 30px;
+        height: 30px;
+    }
+    .count-display {
+        width: 60px;
+    }
+}

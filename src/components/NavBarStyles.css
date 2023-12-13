@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+    height: 110px;
+    font-size: 18px;
+}
+
+.basket {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    height: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.basket:hover {
+    cursor: pointer;
+    color: #00a82d;
+    .basket-svg {
+        fill: #00a82d;
+    }
+}
+
+.item-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #00a82d;
+    color: white;
+    font-size: 14px;
+}
+
+@media (min-width: 320px) and (max-width: 580px) {
+    .basket-text {
+        display: none;
+    }
+
+    .logo {
+        height: 25px;
+    }
+    .basket-svg {
+        width: 25px;
+    }
+
+    .item-counter {
+        width: 20px;
+        height: 20px;
+        border-radius: 20px;
+    }
+}
+
+@media (min-width: 750px) and (max-width: 1200px) {
+    .navbar {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 749px) {
+    .navbar {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
